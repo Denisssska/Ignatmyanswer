@@ -6,4 +6,4 @@ function AlternativeSuperButton() {
     )
 }
 
-export default AlternativeSuperButton
+ export default AlternativeSuperButton

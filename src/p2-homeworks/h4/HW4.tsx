@@ -4,6 +4,7 @@ import s from './HW4.module.css'
 import SuperButton from './common/c2-SuperButton/SuperButton'
 import SuperCheckbox from './common/c3-SuperCheckbox/SuperCheckbox'
 
+
 function HW4() {
     const [text, setText] = useState<string>('')
     const error = text ? '' : 'error'
@@ -17,7 +18,8 @@ function HW4() {
     }
 
     const [checked, setChecked] = useState<boolean>(false)
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
+
+    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked( e.currentTarget.checked)
 
     return (
         <div>
@@ -30,7 +32,7 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                     spanClassName={s.testSpanError}
                 />
 
                 <SuperInputText
@@ -57,6 +59,8 @@ function HW4() {
                 {/*----------------------------------------------------*/}
 
                 <SuperCheckbox
+
+                    type="checkbox"
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
@@ -64,7 +68,7 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox   checked={checked} onChange={testOnChange}/>
             </div>
 
             <hr/>
