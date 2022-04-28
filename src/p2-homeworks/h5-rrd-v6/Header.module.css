@@ -1,0 +1,29 @@
+.container{
+    margin-left: -250px;
+    width:400px;
+    transition:2s;
+}
+.container:hover{
+    margin-left: 0;
+    animation-name:container;
+    transition:2s;
+
+}
+.nav1,.nav2,.nav3{
+margin-left: 10px;
+    text-decoration: none;
+    width: 0;
+    height :20px;
+    opacity: 30%;
+
+}.nav1:hover,.nav2:hover,.nav3:hover{
+margin-left: 10px;
+    text-decoration: none;
+    width: 0;
+    height :20px;
+    opacity: 100%;
+
+}
+
+
+
