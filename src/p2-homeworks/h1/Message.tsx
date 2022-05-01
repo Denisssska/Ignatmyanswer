@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './Message.module.css';
-type NewArrType={
+
+type NewArrType = {
     avatar: string,
     name: string,
     message: string,
@@ -8,17 +9,16 @@ type NewArrType={
 
 }
 
-function Message(props:NewArrType) {
+function Message(props: NewArrType) {
     return (
-        <div className= {style.message}>
-
-            <div><img src={props.avatar} alt='logo'/></div>
+        <div className={style.message}>
+                <img src={props.avatar} alt='logo'/>
+            <div className={style.angle}/>
             <div className={style.text}>
                 <div className={style.name}>{props.name}</div>
                 <div>{props.message}</div>
                 <div className={style.time}>{props.time}</div>
             </div>
-
         </div>
     )
 }

@@ -15,6 +15,12 @@ img{
     border-radius: 50%;
     margin:5px;
 }
+.angle{
+    margin-top:7px;
+    width: 15px;
+    height: 16px;
+    background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 15px, rgba(113,135,255) 0);
+}
 .text{
     background-color: cornflowerblue;
     border-radius: 10px;
