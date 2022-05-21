@@ -14,7 +14,8 @@ const initialPeople = [
 ]
 
 function HW8() {
-    const [people, setPeople] = useState<UserType>(initialPeople) // need to fix any
+    const [people, setPeople] = useState<UserType>(initialPeople)
+    // need to fix any
 
     // need to fix any
     const finalPeople = people.map((p) => (

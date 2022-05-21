@@ -16,10 +16,11 @@ type ActionsType = SortNameActionUpType
     | CheckAgeActionType
     | SortNameActionDownType;
 
-export const homeWorkReducer = (state: UserType, action: ActionsType): UserType => { // need to fix any
+export const homeWorkReducer = (state: UserType, action: ActionsType): UserType => {
     switch (action.type) {
         case 'sort': {
-            let newState = [...state]// need to fix
+            let newState = [...state]
+            // need to fix
             if (action.payload === 'up')
                 newState.sort(function (a, b) {
                         return a.age - b.age
