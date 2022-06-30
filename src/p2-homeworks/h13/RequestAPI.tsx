@@ -32,7 +32,7 @@ const RequestApi = () => {
 
         });
 
-        instans.post('auth/test', {body: {success: a}})
+        instans.post('auth/test', {success: a})
             .then((res) => console.log(res))
             .catch((error) => {
                 console.log({...error});
@@ -46,6 +46,7 @@ const RequestApi = () => {
     let e
     let f =[]
     for (let key in b) {
+        // @ts-ignore
         c = b[key]
         console.log(key)
        for(key in c){
@@ -59,7 +60,7 @@ const RequestApi = () => {
         <div>
             <SuperButton title={'Post'} onClick={postHandler}>Post</SuperButton>
             <SuperCheckbox onChangeChecked={(value) => onChangeChecked(value)}/>
-            {f.map( (item,index)=><div><span>{item}</span></div>)}
+            {f.map( (item,index)=><div key={index}><span>{item}</span></div>)}
         </div>
     );
 };
